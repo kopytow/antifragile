@@ -1,0 +1,82 @@
+
+/* Чекбокс в форме */
+.checkbox {
+    display: block;
+    width: 100%; /* Ограничиваем ширину */
+    padding-left: 40px; /* Отступ от чекбокса */
+    position: relative;
+
+    font-size: 16px;
+    color: var(--text-white);
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    margin-top: 18px;
+}
+
+/* Ссылка на политику конфиденциальности */
+.checkbox a {
+    width: fit-content;
+    display: inline;
+    border: none;
+    
+    text-decoration: underline;
+    font-weight: inherit;
+    font-size: inherit;
+    color: var(--text-white);
+}
+
+/* Прячем стандартный чекбокс */
+.checkbox input[type=checkbox] {
+    height: 0;
+    width: 0;
+    position: absolute;
+
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* Кастомный чекбокс */
+.checkbox span {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 3px solid #ffffff;
+    transition: .2s all;
+}
+
+/* Наведение на пк */
+@media (hover: hover) {
+    .checkbox:hover input[type=checkbox] ~ span {
+        background-color: #5e5e5e;
+    }
+}
+
+/* Клик на телефоне */
+@media (hover: none) {
+    .checkbox:active input[type=checkbox] ~ span {
+        background-color: #5e5e5e;
+    }
+}
+
+/* Когда чекбокс не активирован нету галочки */
+.checkbox span svg {
+    display: none;
+}
+
+/* Когда чекбокс активирован появляется галочка */
+.checkbox input[type=checkbox]:checked ~ span svg {
+    display: block;
+}

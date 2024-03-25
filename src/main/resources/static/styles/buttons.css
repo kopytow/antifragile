@@ -1,0 +1,118 @@
+:root {
+    /* Желтая кнопка */
+    --button-yellow: #ffd12d;
+    --button-yellow-hover: #1d2136;
+    --button-yellow-text: #000000;
+    --button-yellow-hover-text: #ffffff;
+
+    /* Альтернативная желтая кнопка */
+    --button-yellowAlt-hover: #ffffff;
+    --button-yellowAlt-hover-text: #1d2136;
+
+    /* Темно синяя кнопка */
+    --button-darkblue:  #1d2136;
+    --button-darkblue-hover: #ffffff;
+    --button-darkblue-border: #ffffff;
+    --button-darkblue-text: #ffffff;
+    --button-darkblue-hover-text: #1d2136;;
+}
+
+
+button, a {
+    width: 245px;
+    height: 46px;
+
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+
+    color: var(--text-white);
+    text-decoration: none;
+
+    /* Отключаем базовые стили */
+    outline: none;
+    border: none;
+
+    cursor: pointer;
+    transition: .2s all;
+}
+
+
+/* Отключенная кнопка */
+button:disabled {
+    color: #747474 !important;
+    border-color: #747474 !important;
+    background-color: transparent !important;
+
+    cursor: not-allowed !important;
+}
+
+
+/* Зеленая кнопка */
+.button-yellow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background-color: var(--button-yellow);
+    color: var(--button-yellow-text);
+}
+
+/* Наведение на пк */
+@media (hover: hover) {
+    .button-yellow:hover {
+        color: var(--button-yellow-hover-text);
+        background-color: var(--button-yellow-hover);
+    }
+
+    /* Альтернативный вариант, кнопка становится белой */
+    .button-yellow.alt:hover {
+        color: var(--button-yellowAlt-text-hover);
+        background-color: var(--button-yellowAlt-hover);
+    }
+}
+
+/* Клик на телефоне */
+@media (hover: none) {
+    .button-yellow:active {
+        color: var(--button-yellow-hover-text);
+        background-color: var(--button-yellow-hover);
+    }
+
+    /* Альтернативный вариант, кнопка становится белой */
+    .button-yellow.alt:active {
+        color: var(--button-yellowAlt-text-hover);
+        background-color: var(--button-yellowAlt-hover);
+    }
+}
+
+
+
+/* Темно-синяя кнопка */
+.button-darkblue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 1px solid var(--button-darkblue-border);
+    background-color: var(--button-darkblue);
+    color: var(--button-darkblue-text);
+}
+
+/* Наведение на пк */
+@media (hover: hover) {
+    .button-darkblue:hover {
+        color: var(--button-darkblue-hover-text);
+        background-color: var(--button-darkblue-hover);
+    }
+}
+
+/* Клик на телефоне */
+@media (hover: none) {
+    .button-darkblue:active {
+        color: var(--button-darkblue-hover-text);
+        background-color: var(--button-darkblue-hover);
+    }
+}

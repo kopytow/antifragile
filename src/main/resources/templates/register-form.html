@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Регистрация на платформе "email", "firstName", "lastName", "phoneNumber", "nickname", "pdpc"</title>
+    </head>
+    <body>
+        <h1>Регистрация</h1>
+        <form>
+            <div>
+                <label for="lfemail">Электронная почта:</label>
+                <input id="lfemail" type = "email"  name = "email" value = "user@mail.com">
+            </div>
+            <div>
+                <label for="lfpass1">Пароль:</label>
+                <input id="lfpass1" type = "password"  name = "password1" value = "password">
+            </div>
+            <div>
+                <label for="lfpass2">Подтвердите пароль:</label>
+                <input id="lfpass2" type = "password"  name = "password2" value = "password">
+            </div>
+            <div>
+                <label for="lfname">Имя:</label>
+                <input id="lfname" type = "text"  name = "firstname" value = "Первуша">
+            </div>
+            <div>
+                <label for="lfsname">Фамилия:</label>
+                <input id="lfsname" type="text" name = "lastname" value = "Третьяк">
+            </div>
+            <div>
+                <label for="lfphone">Телефон:</label>
+                <input id="lfphone" type = "tel" name = "phone" value =  "+0 (000) 000-00-00">
+            </div>
+            <div>
+                <label for="lfnname">Прозвище/Nickname:</label>
+                <input id="lfnname" type = "text" name = "nickname" value = "pervaq">
+            </div>
+            <div>
+                <input id="pdpc" type = "checkbox" name = "pdpc" value = "pdpc">
+                <label for="pdpc">Я согласен на обработку личных данных:</label>
+            </div>
+            <div>
+                <input type = "submit" name = "submit" value = "Сохранить">
+            </div>
+        </form>
+    </body>
+</html>

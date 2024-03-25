@@ -1,0 +1,52 @@
+/* Фикс авто ввода */
+input[type=text]:-webkit-autofill, 
+input[type=text]:-webkit-autofill:focus {
+    transition: background-color 60000s 0s, color 60000s 0s;
+}
+
+input[type=text] {
+    outline: none;
+}
+
+
+
+/* Инпут с переносом placeholder на верх внутри инпута */
+.custom-input {
+    width: 100%;
+    position: relative;
+}
+
+/* Инпут в блоке */
+.custom-input input {
+    width: 100%;
+    padding: 30px 12px 5px 12px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #fff;
+
+    /* Текст в инпуте */
+    font-size: 18px;
+    color: var(--text-darkblue);
+}
+
+/* Замена плейсхолдера */
+.custom-input label {
+    position: absolute;
+    top: 30px;
+    left: 12px;
+
+    font-size: 18px;
+    color: #959393;;
+    transition: .2s all;
+
+    /* Отключаем взаимодействие с label */
+    pointer-events: none;
+}
+
+/* Перемещаем плейсхолдер выше если в инпуте есть значение или инпут активен */
+.custom-input input:focus ~ label,
+.custom-input input:valid ~ label {
+    transform: translateY(-27px);
+    font-size: 12px;
+}

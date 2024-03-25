@@ -1,10 +1,10 @@
-package ru.productstar.test;
+package ru.productstar.antifragile;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Created by User 19.03.2024 21:12
+ * Created by Bazil Kopytow 19.03.2024 21:12
  */
 @SpringBootApplication
 public class Main {

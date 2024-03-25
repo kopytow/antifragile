@@ -1,0 +1,9 @@
+footer {
+    height: 114px;
+    background-color: var(--bg-main);
+}
+
+footer svg {
+    margin-left: 40px;
+    margin-top: 40px;
+}

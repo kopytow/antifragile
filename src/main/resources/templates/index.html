@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/assets/favicon.ico" type="image/x-icon" th:href="@{assets/favicon.ico}">
+    <title>Тестирование навыков</title>
+
+    <link rel="stylesheet" href="../static/styles/style.css" th:href="@{styles/style.css}">
+    <link rel="stylesheet" href="../static/styles/text.css" th:href="@{styles/text.css}">
+    <link rel="stylesheet" href="../static/styles/buttons.css" th:href="@{styles/buttons.css}">
+    <link rel="stylesheet" href="../static/styles/input.css" th:href="@{styles/input.css}">
+    <link rel="stylesheet" href="../static/styles/checkbox.css" th:href="@{styles/checkbox.css}">
+
+    <link rel="stylesheet" href="../static/styles/header/header.css" th:href="@{styles/header/header.css}">
+
+    <link rel="stylesheet" href="../static/styles/rating/rating.css" th:href="@{styles/rating/rating.css}">
+    <link rel="stylesheet" href="../static/styles/rating/rating-user.css" th:href="@{styles/rating/rating-user.css}">
+
+    <link rel="stylesheet" href="../static/styles/user/user.css" th:href="@{styles/user/user.css}">
+
+    <link rel="stylesheet" href="../static/styles/registration/registration.css"
+          th:href="@{styles/registration/registration.css}">
+
+    <link rel="stylesheet" href="../static/styles/footer/footer.css" th:href="@{styles/footer/footer.css}">
+</head>
+<body>
+<article>
+    <header>
+        <img class="header__logo" src="../static/assets/header/productstar-logo.png" alt="productstar-logo"
+             th:src="@{assets/header/productstar-logo.png}">
+        <img class="header__rocket-image" src="../static/assets/header/header-rocket.png" alt="rocket-image"
+             th:src="@{assets/header/header-rocket.png}">
+
+        <div class="header__container">
+            <h1 class="header__container__title">Узнай свой <span>рейтинг</span> навыков в управлении продуктами</h1>
+            <ul>
+                <li>Пройди БЕСПЛАТНЫЙ тест и узнай свое место в рейтинге</li>
+                <li>Отслеживай свой прогресс, проходи тест повторно</li>
+                <li>Прими участие в соревновании за 1 место в рейтинге уже сейчас</li>
+            </ul>
+
+            <div class="header__container__buttons">
+                <button class="button-yellow">Участвую</button>
+                <button class="button-darkblue">Подробнее</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="rating-section">
+        <div class="rating">
+            <h1 class="rating__title">Рейтинг участников</h1>
+            <h2 class="rating__subtitle">Создан на основании правильных ответов на вопросы теста</h2>
+
+            <!-- Контейнер с рейтингом участников -->
+            <div class="rating__container"></div>
+
+            <h2 class="rating__subtitle">Попади в рейтинг прямо сейчас</h2>
+            <button class="button-yellow">Участвую</button>
+        </div>
+    </section>
+
+    <section class="user-section">
+        <div class="user">
+            <h1 class="user__title">Личная карточка участника</h1>
+            <h2 class="user__subtitle">Имя / Никнейм пользователя </h2>
+
+            <div class="user-data__container">
+                <div class="user-data">
+                    <div class="user-data__position" data-position="1"></div>
+                    <p class="user-data__text">Количество правильных ответов</p>
+                    <p class="user-data__text user-data__text_bold">20/30</p>
+                </div>
+                <div class="user-data">
+                    <div class="user-data__position" data-position="2"></div>
+                    <p class="user-data__text">Скорость прохождения теста</p>
+                    <p class="user-data__text user-data__text_bold">15 мин</p>
+                </div>
+                <div class="user-data">
+                    <div class="user-data__position" data-position="3"></div>
+                    <p class="user-data__text">Дата прохождения теста</p>
+                    <p class="user-data__text user-data__text_bold">29/03/2024</p>
+                </div>
+                <div class="user-data">
+                    <div class="user-data__position" data-position="4"></div>
+                    <p class="user-data__text">Уровень владения навыками</p>
+                    <img class="user-data__skill-level" src="../static/assets/skill-levels/confident.png"
+                         alt="skill-level" th:src="@{assets/skill-levels/confident.png}">
+                    <p class="user-data__text">Уверенный</p>
+                </div>
+                <div class="user-data">
+                    <div class="user-data__position" data-position="5"></div>
+                    <p class="user-data__text">Мой средний результат</p>
+                    <p class="user-data__percent">65%</p>
+                    <div class="user-data__progressbar-bg">
+                        <div class="user-data__progressbar" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="user-data">
+                    <div class="user-data__position" data-position="6"></div>
+                    <p class="user-data__text">Самооценка</p>
+                    <p class="user-data__percent">75%</p>
+                    <div class="user-data__progressbar-bg">
+                        <div class="user-data__progressbar" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="user-data">
+                    <div class="user-data__position" data-position="7"></div>
+                    <p class="user-data__text">Результат других</p>
+                    <p class="user-data__percent">63%</p>
+                    <div class="user-data__progressbar-bg">
+                        <div class="user-data__progressbar" style="width: 63%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="button-yellow">Рейтинг</button>
+
+            <p class="user__again">Пройти еще раз</p>
+        </div>
+    </section>
+
+    <section class="registration-section">
+        <form class="registration-form">
+            <div class="custom-input">
+                <input type="text" id="reg-form-name" name="name" maxlength="100" required>
+                <label for="reg-form-name">Имя</label>
+            </div>
+
+            <div class="custom-input">
+                <input type="text" id="reg-form-phone" name="phone" maxlength="100" required>
+                <label for="reg-form-phone">Номер телефона</label>
+            </div>
+
+            <div class="custom-input">
+                <input type="text" id="reg-form-email" name="email" maxlength="100" required>
+                <label for="reg-form-email">Почта</label>
+            </div>
+
+            <div class="custom-input">
+                <input type="text" id="reg-form-nickname" name="nickname" maxlength="100" required>
+                <label for="reg-form-nickname">Никнейм (будет отображаться в рейтинге)</label>
+            </div>
+
+            <label class="checkbox" for="reg-form-policy">Я подтверждаю согласие на обработку персональных данных
+                в соответствии с условиями <a
+                        href="https://productstar.ru/confpolitics?utm_source=admitad&utm_medium=cpa&utm_campaign=58&admitad_uid=4d52e016740a9f112838924a8ababc4a"
+                        target="_blank">Политики конфиденциальности</a>
+                <input type="checkbox" id="reg-form-policy">
+                <span>
+                        <svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.3125 18.48L0 9.72024L2.07813 7.5303L8.3125 14.1001L21.6927 0L23.7708 2.18994L8.3125 18.48Z"
+                                  fill="white"/>
+                        </svg>
+                    </span>
+            </label>
+
+            <p class="registration-form__error">Имеются некорректно заполненные поля</p>
+
+            <div class="registration-form__buttons">
+                <a class="button-yellow alt" th:href="@{login}">Войти</a>
+                <a class="button-darkblue" href="#">Зарегистрироваться</a>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <svg width="218" height="37" viewBox="0 0 218 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 36.3333V0.303623H7.74233C9.15923 0.303623 10.4075 0.489169 11.487 0.86026C12.5665 1.23135 13.5449 1.8892 14.422 2.83379C15.2991 3.7784 15.9064 4.89167 16.2437 6.17363C16.5811 7.42185 16.7498 9.1255 16.7498 11.2846C16.7498 12.9039 16.6485 14.2702 16.4461 15.3835C16.2775 16.4967 15.8895 17.5425 15.2823 18.5209C14.5738 19.7016 13.6292 20.6294 12.4485 21.3041C11.2677 21.945 9.71587 22.2655 7.79294 22.2655H5.16156V36.3333H0ZM5.16156 5.16155V17.4076H7.64113C8.68693 17.4076 9.49659 17.2558 10.0701 16.9522C10.6436 16.6485 11.0653 16.2269 11.3352 15.6871C11.6051 15.181 11.7569 14.5569 11.7906 13.8148C11.8581 13.0726 11.8918 12.246 11.8918 11.3352C11.8918 10.4918 11.875 9.699 11.8412 8.95682C11.8075 8.1809 11.6557 7.50619 11.3858 6.93268C11.1159 6.35917 10.7111 5.92061 10.1713 5.61699C9.63153 5.31337 8.85561 5.16155 7.84354 5.16155H5.16156Z"
+                  fill="#BEBEBE"/>
+            <path d="M25.7686 5.16155V16.3955H28.7036C29.6145 16.3955 30.3398 16.2775 30.8796 16.0413C31.4194 15.7714 31.8411 15.4003 32.1447 14.928C32.4146 14.4557 32.6001 13.8822 32.7013 13.2075C32.8025 12.4991 32.8531 11.6894 32.8531 10.7785C32.8531 9.86768 32.8025 9.07489 32.7013 8.40018C32.6001 7.69173 32.3977 7.08449 32.0941 6.57846C31.4531 5.63386 30.2386 5.16155 28.4506 5.16155H25.7686ZM20.6071 36.3333V0.303623H28.9061C34.9785 0.303623 38.0147 3.829 38.0147 10.8798C38.0147 13.0051 37.6773 14.81 37.0026 16.2943C36.3616 17.7787 35.2146 18.9763 33.5616 19.8872L39.128 36.3333H33.6628L28.8555 20.9498H25.7686V36.3333H20.6071Z"
+                  fill="#BEBEBE"/>
+            <path d="M41.8495 8.80501C41.8495 7.35437 42.1025 6.07242 42.6085 4.95914C43.1146 3.84587 43.7893 2.91813 44.6327 2.17595C45.4423 1.4675 46.3532 0.927732 47.3653 0.55664C48.4111 0.185547 49.4569 0 50.5027 0C51.5485 0 52.5774 0.185547 53.5895 0.55664C54.6353 0.927732 55.5799 1.4675 56.4233 2.17595C57.2329 2.91813 57.8908 3.84587 58.3968 4.95914C58.9029 6.07242 59.1559 7.35437 59.1559 8.80501V27.8319C59.1559 29.35 58.9029 30.6488 58.3968 31.7284C57.8908 32.8079 57.2329 33.7019 56.4233 34.4104C55.5799 35.1526 54.6353 35.7092 53.5895 36.0803C52.5774 36.4514 51.5485 36.6369 50.5027 36.6369C49.4569 36.6369 48.4111 36.4514 47.3653 36.0803C46.3532 35.7092 45.4423 35.1526 44.6327 34.4104C43.7893 33.7019 43.1146 32.8079 42.6085 31.7284C42.1025 30.6488 41.8495 29.35 41.8495 27.8319V8.80501ZM47.011 27.8319C47.011 29.0801 47.3484 30.0079 48.0231 30.6151C48.7316 31.1886 49.5581 31.4754 50.5027 31.4754C51.4473 31.4754 52.2569 31.1886 52.9316 30.6151C53.6401 30.0079 53.9943 29.0801 53.9943 27.8319V8.80501C53.9943 7.55679 53.6401 6.64593 52.9316 6.07242C52.2569 5.46518 51.4473 5.16155 50.5027 5.16155C49.5581 5.16155 48.7316 5.46518 48.0231 6.07242C47.3484 6.64593 47.011 7.55679 47.011 8.80501V27.8319Z"
+                  fill="#BEBEBE"/>
+            <path d="M63.6991 36.3333V0.303623H71.3402C74.309 0.303623 76.5524 1.11328 78.0705 2.73259C79.6223 4.3519 80.3983 6.64593 80.3983 9.61467V26.4656C80.3983 29.8392 79.5717 32.3356 77.9187 33.9549C76.2994 35.5405 73.9548 36.3333 70.8848 36.3333H63.6991ZM68.8607 5.16155V31.4754H71.239C72.6897 31.4754 73.7186 31.1211 74.3258 30.4127C74.9331 29.6705 75.2367 28.5235 75.2367 26.9717V9.61467C75.2367 8.19777 74.95 7.10136 74.3764 6.32544C73.8029 5.54952 72.7571 5.16155 71.239 5.16155H68.8607Z"
+                  fill="#BEBEBE"/>
+            <path d="M101.944 0.303623V28.2367C101.944 29.4175 101.725 30.5139 101.286 31.526C100.882 32.5043 100.291 33.3814 99.5153 34.1574C98.7394 34.9333 97.8454 35.5405 96.8333 35.9791C95.8213 36.4176 94.7417 36.6369 93.5947 36.6369C92.4477 36.6369 91.3681 36.4176 90.3561 35.9791C89.3777 35.5405 88.5006 34.9333 87.7247 34.1574C86.9488 33.3814 86.3415 32.5043 85.903 31.526C85.4644 30.5139 85.2451 29.4175 85.2451 28.2367V0.303623H90.4067V27.7307C90.4067 29.0127 90.7103 29.9573 91.3175 30.5645C91.9248 31.1717 92.6838 31.4754 93.5947 31.4754C94.5056 31.4754 95.2646 31.1717 95.8719 30.5645C96.4791 29.9573 96.7827 29.0127 96.7827 27.7307V0.303623H101.944Z"
+                  fill="#BEBEBE"/>
+            <path d="M123.187 26.0608V28.2873C123.187 29.4006 122.967 30.4633 122.529 31.4754C122.124 32.4537 121.55 33.3308 120.808 34.1068C120.066 34.8827 119.189 35.5068 118.177 35.9791C117.199 36.4176 116.136 36.6369 114.989 36.6369C114.011 36.6369 113.015 36.502 112.003 36.2321C110.991 35.9622 110.08 35.4899 109.271 34.8152C108.461 34.1405 107.786 33.2802 107.247 32.2344C106.741 31.1549 106.488 29.7886 106.488 28.1355V8.29897C106.488 7.11822 106.69 6.02182 107.095 5.00975C107.5 3.99768 108.073 3.12055 108.815 2.37837C109.557 1.63618 110.435 1.06267 111.447 0.657846C112.492 0.219282 113.639 0 114.888 0C117.317 0 119.29 0.792789 120.808 2.37837C121.55 3.15429 122.124 4.08202 122.529 5.16155C122.967 6.20736 123.187 7.35437 123.187 8.60259V10.6267H118.025V8.90621C118.025 7.89414 117.738 7.01702 117.165 6.27483C116.591 5.53265 115.815 5.16155 114.837 5.16155C113.555 5.16155 112.695 5.56638 112.256 6.37604C111.851 7.15196 111.649 8.14716 111.649 9.36164V27.7813C111.649 28.8271 111.868 29.7042 112.307 30.4127C112.779 31.1211 113.606 31.4754 114.786 31.4754C115.124 31.4754 115.478 31.4248 115.849 31.3236C116.254 31.1886 116.625 30.9862 116.962 30.7163C117.266 30.4464 117.519 30.0753 117.721 29.603C117.924 29.1307 118.025 28.5404 118.025 27.8319V26.0608H123.187Z"
+                  fill="#BEBEBE"/>
+            <path d="M130.789 36.3333V5.16155H124.817V0.303623H141.921V5.16155H135.95V36.3333H130.789Z" fill="#BEBEBE"/>
+            <path d="M160.899 10.6773H155.738V9.51346C155.738 8.33271 155.451 7.32064 154.878 6.47725C154.338 5.60012 153.41 5.16155 152.094 5.16155C151.386 5.16155 150.812 5.2965 150.374 5.56638C149.935 5.83627 149.581 6.17363 149.311 6.57846C149.041 7.01702 148.856 7.52305 148.754 8.09656C148.653 8.63633 148.603 9.20983 148.603 9.81708C148.603 10.5255 148.62 11.1159 148.653 11.5882C148.721 12.0605 148.856 12.4822 149.058 12.8533C149.261 13.2244 149.547 13.5449 149.918 13.8148C150.323 14.0846 150.863 14.3545 151.538 14.6244L155.485 16.1931C156.632 16.6317 157.559 17.1546 158.268 17.7618C158.976 18.3353 159.533 19.01 159.938 19.786C160.309 20.5956 160.562 21.5233 160.697 22.5692C160.832 23.5812 160.899 24.7451 160.899 26.0608C160.899 27.5789 160.747 28.9958 160.444 30.3115C160.14 31.5934 159.651 32.6898 158.976 33.6007C158.268 34.5453 157.34 35.2875 156.193 35.8273C155.046 36.367 153.646 36.6369 151.993 36.6369C150.745 36.6369 149.581 36.4176 148.501 35.9791C147.422 35.5405 146.494 34.9333 145.718 34.1574C144.942 33.3814 144.318 32.4874 143.846 31.4754C143.407 30.4296 143.188 29.2994 143.188 28.0849V26.162H148.35V27.7813C148.35 28.7259 148.62 29.5862 149.159 30.3621C149.733 31.1043 150.677 31.4754 151.993 31.4754C152.87 31.4754 153.545 31.3573 154.017 31.1211C154.523 30.8513 154.911 30.4802 155.181 30.0079C155.451 29.5356 155.603 28.9789 155.637 28.338C155.704 27.6632 155.738 26.9211 155.738 26.1114C155.738 25.1668 155.704 24.3909 155.637 23.7836C155.569 23.1764 155.434 22.6872 155.232 22.3161C154.996 21.945 154.675 21.6414 154.27 21.4053C153.899 21.1691 153.393 20.9161 152.752 20.6462L149.058 19.1281C146.832 18.2173 145.33 17.0196 144.554 15.5353C143.812 14.0172 143.441 12.128 143.441 9.86768C143.441 8.51826 143.627 7.2363 143.998 6.02182C144.369 4.80733 144.925 3.76153 145.668 2.8844C146.376 2.00727 147.27 1.31569 148.35 0.809657C149.463 0.269886 150.779 0 152.297 0C153.579 0 154.743 0.23615 155.788 0.708449C156.868 1.18075 157.796 1.80486 158.572 2.58078C160.123 4.20009 160.899 6.05555 160.899 8.14716V10.6773Z"
+                  fill="#BEBEBE"/>
+            <path d="M168.148 36.3333V5.16155H162.177V0.303623H179.281V5.16155H173.31V36.3333H168.148Z" fill="#BEBEBE"/>
+            <path d="M189.217 23.733L186.687 10.6773H186.585L184.055 23.733H189.217ZM176.465 36.3333L184.511 0.303623H188.812L196.858 36.3333H191.696L190.178 28.591H183.144L181.626 36.3333H176.465Z"
+                  fill="#BEBEBE"/>
+            <path d="M204.561 5.16155V16.3955H207.496C208.407 16.3955 209.132 16.2775 209.672 16.0413C210.212 15.7714 210.633 15.4003 210.937 14.928C211.207 14.4557 211.393 13.8822 211.494 13.2075C211.595 12.4991 211.646 11.6894 211.646 10.7785C211.646 9.86768 211.595 9.07489 211.494 8.40018C211.393 7.69173 211.19 7.08449 210.886 6.57846C210.245 5.63386 209.031 5.16155 207.243 5.16155H204.561ZM199.399 36.3333V0.303623H207.698C213.771 0.303623 216.807 3.829 216.807 10.8798C216.807 13.0051 216.47 14.81 215.795 16.2943C215.154 17.7787 214.007 18.9763 212.354 19.8872L217.92 36.3333H212.455L207.648 20.9498H204.561V36.3333H199.399Z"
+                  fill="#BEBEBE"/>
+        </svg>
+    </footer>
+</article>
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script th:src="@{../static/scripts/db.js}"></script>
+</body>
+</html>
