@@ -37,7 +37,7 @@ public class Person implements Comparable<Person> {
      * Фамилия.
      */
     @Column(nullable = false, length = 64)
-    private String lastName;
+    private String lastName = "Безфамильный";
 
     /**
      * Номер елефона.
@@ -54,7 +54,7 @@ public class Person implements Comparable<Person> {
     /**
      * Personal Data Processing Consent - согласие на обработку персональных данных.
      */
-    private boolean personalDataProcessingConsent;
+    private boolean pdpc;
 
     public Person() {
     }
@@ -107,24 +107,24 @@ public class Person implements Comparable<Person> {
         this.nickname = nickname;
     }
 
-    public boolean isPersonalDataProcessingConsent() {
-        return personalDataProcessingConsent;
+    public boolean isPdpc() {
+        return pdpc;
     }
 
-    public void setPersonalDataProcessingConsent(boolean personalDataProcessingConsent) {
-        this.personalDataProcessingConsent = personalDataProcessingConsent;
+    public void setPdpc(boolean personalDataProcessingConsent) {
+        this.pdpc = personalDataProcessingConsent;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Person person)) return false;
-        return isPersonalDataProcessingConsent() == person.isPersonalDataProcessingConsent() && Objects.equals(getId(), person.getId()) && Objects.equals(getUser(), person.getUser()) && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getPhone(), person.getPhone()) && Objects.equals(getNickname(), person.getNickname());
+        return isPdpc() == person.isPdpc() && Objects.equals(getId(), person.getId()) && Objects.equals(getUser(), person.getUser()) && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getPhone(), person.getPhone()) && Objects.equals(getNickname(), person.getNickname());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getUser(), getFirstName(), getLastName(), getPhone(), getNickname(), isPersonalDataProcessingConsent());
+        return Objects.hash(getId(), getUser(), getFirstName(), getLastName(), getPhone(), getNickname(), isPdpc());
     }
 
     @Override
@@ -136,7 +136,7 @@ public class Person implements Comparable<Person> {
                 ", lastName='" + lastName + '\'' +
                 ", phone='" + phone + '\'' +
                 ", nickname='" + nickname + '\'' +
-                ", personalDataProcessingConsent=" + personalDataProcessingConsent +
+                ", personalDataProcessingConsent=" + pdpc +
                 '}';
     }
 

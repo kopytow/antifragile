@@ -1,6 +1,5 @@
 package ru.productstar.antifragile.repositories;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -50,7 +49,7 @@ class PersonRepositoryTest {
             person.setLastName("Kumar");
             person.setNickname("K.Ravi");
             person.setPhone("+0(000)-000-00-00");
-            person.setPersonalDataProcessingConsent(false);
+            person.setPdpc(false);
 
             var savedPerson = repository.save(person);
             var existedPerson = manager.find(Person.class, savedPerson.getId());

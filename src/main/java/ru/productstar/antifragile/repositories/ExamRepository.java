@@ -1,7 +1,10 @@
 package ru.productstar.antifragile.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import ru.productstar.antifragile.model.Exam;
+
+import java.util.List;
 
 /**
  * Интерфейс доступа к таблице базы данных exams.
@@ -27,4 +30,6 @@ import ru.productstar.antifragile.model.Exam;
  * Created by Bazil Kopytow 21.03.2024 21:52
  */
 public interface ExamRepository extends JpaRepository<Exam, Long> {
+//    @Query(nativeQuery = true, value = "select * from public.exams where persons_pkey=:personId")
+    List<Exam> findAllByPersonId(Long personId);
 }
